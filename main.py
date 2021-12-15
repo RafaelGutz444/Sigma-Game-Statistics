@@ -25,10 +25,10 @@ summoner_request = requests.get(summoner_call).json()  # The actual API request 
 # ".json()" method converts the string response into a python dictionary type so we may call the specific info we need.
 
 summoner_puuid = summoner_request['puuid']  # calls for the puuid from the API response
-print(type(summoner_puuid), summoner_puuid, " puuid")
+# print(type(summoner_puuid), summoner_puuid, " puuid")
 
-# API: Match-v5
-# Goal: Pull RAFIYO match history
+# API: Match-v5 --------------------------------------------------------------------------------------------------------
+# Goal: Pull RAFIYO match history --------------------------------------------------------------------------------------
 
 match_region = "americas"
 match_apiName = "match"
@@ -43,9 +43,55 @@ match_call = API_URL.format(region=match_region, api_name=match_apiName, version
                             path_parameter=match_path_parameter, match_ids=match_ids, api_key=app_key)
 
 match_request = requests.get(match_call).json()
-match_history = match_request
-i = 0
-i: int
-for i in range(0, len(match_history)):
-    print(match_history[i], '\n')
-    i += 1
+
+# CSV MatchHistory File Creation
+fields = ['MatchID']
+filename = 'MatchHistory.csv'
+# print(match_request)
+
+with open(filename, 'w') as csvFile:
+    csvWriter = csv.writer(csvFile)
+    csvWriter.writerow(fields)
+
+    # Iterate through array to make each item from the array, a new row in csv
+    i = 0
+    for i in match_request:
+        csvWriter.writerow([i])
+
+# API: Match-v5 --------------------------------------------------------------------------------------------------------
+# Goal: Iterate through every MatchID in MatchHistory.csv and pull specific match team summary data --------------------
+
+# Can reuse url parameters from last section because we're calling from the same API
+match_summary_parameter = ''
+match_summary_ids = '?'
+match_summary_path_parameter = []
+# A separate API request for each MatchID we need data from.
+with open(filename, 'r') as csv_file:
+    csv_reader = csv.reader(csv_file)
+    columnHeader = next(csv_reader)
+    for row in csv_reader:
+        match_summary_path_parameter.append(row)
+
+    # k = 0
+    # for k in range(0, len(match_summary_path_parameter)):
+    #     match_info_call = API_URL.format(region=match_region, api_name=match_apiName, version=match_version,
+    #                                      api_name_plural=match_name_plural, parameter=match_summary_parameter,
+    #                                      path_parameter=match_summary_path_parameter[], match_ids=match_summary_ids,
+    #                                      api_key=app_key)
+    #     match_info = requests.get(match_info_call).json()
+    #     k += 1
+    API_URL1 = "https://{region}.api.riotgames.com/lol/{api_name}/{version}/{api_name_plural}/{" \
+               "path_parameter}{match_ids}api_key={api_key}"
+
+    match_info_call = API_URL1.format(region=match_region, api_name=match_apiName, version=match_version,
+                                      api_name_plural=match_name_plural, parameter=match_summary_parameter,
+                                      path_parameter=match_summary_path_parameter[0][0], match_ids=match_summary_ids,
+                                      api_key=app_key)
+
+    match_info = requests.get(match_info_call).json()
+    print(match_info['metadata']['participants'])
+
+with open('MatchSummary.csv', 'w') as matchSummary:
+    fields = ['Participants']
+    writer = csv.DictWriter(matchSummary, fieldnames=fields)
+    writer.writeheader()

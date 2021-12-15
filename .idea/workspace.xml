@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a38960c8-543e-4360-81c8-d9df17a36117" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Sigma-Game-Statistics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sigma-Game-Statistics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a38960c8-543e-4360-81c8-d9df17a36117" name="Changes" comment="API request error fix with regards to MatchSummary info">
+      <change afterPath="$PROJECT_DIR$/MatchSummary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/College.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatchHistory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MatchHistory.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/average tuition costs.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cwurData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/education_expenditure_supplementary_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/educational_attainment_supplementary_data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_and_country_table.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shanghaiData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timesData.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="21vnYay6B5DsasHDwGZK9r6nEfQ" />
   <component name="ProjectViewState">
@@ -79,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639086510807</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Data acquisition from Riot Games API">
+      <created>1639360212848</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639360212848</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +119,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Data uploads" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data uploads" />
+    <MESSAGE value="Data acquisition from Riot Games API" />
+    <MESSAGE value="API request error fix with regards to MatchSummary info" />
+    <option name="LAST_COMMIT_MESSAGE" value="API request error fix with regards to MatchSummary info" />
   </component>
 </project>

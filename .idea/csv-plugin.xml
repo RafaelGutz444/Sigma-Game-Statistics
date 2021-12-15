@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/MatchHistory.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/MatchSummary.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/cwurData.csv">
           <value>
             <Attribute>
