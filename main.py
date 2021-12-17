@@ -1,3 +1,4 @@
+
 import api_key
 import requests
 import csv
@@ -72,14 +73,6 @@ with open(filename, 'r') as csv_file:
     for row in csv_reader:
         match_summary_path_parameter.append(row)
 
-    # k = 0
-    # for k in range(0, len(match_summary_path_parameter)):
-    #     match_info_call = API_URL.format(region=match_region, api_name=match_apiName, version=match_version,
-    #                                      api_name_plural=match_name_plural, parameter=match_summary_parameter,
-    #                                      path_parameter=match_summary_path_parameter[], match_ids=match_summary_ids,
-    #                                      api_key=app_key)
-    #     match_info = requests.get(match_info_call).json()
-    #     k += 1
     API_URL1 = "https://{region}.api.riotgames.com/lol/{api_name}/{version}/{api_name_plural}/{" \
                "path_parameter}{match_ids}api_key={api_key}"
 
@@ -88,10 +81,18 @@ with open(filename, 'r') as csv_file:
                                       path_parameter=match_summary_path_parameter[0][0], match_ids=match_summary_ids,
                                       api_key=app_key)
 
-    match_info = requests.get(match_info_call).json()
-    print(match_info['metadata']['participants'])
-
-with open('MatchSummary.csv', 'w') as matchSummary:
+with open('SummonerList.csv', 'w') as matchSummary:
     fields = ['Participants']
     writer = csv.DictWriter(matchSummary, fieldnames=fields)
-    writer.writeheader()
+    match_info = requests.get(match_info_call).json()  # Dictionary type
+    print(type(match_info))
+    print(match_info.keys(), " Match Keys.")
+    print(match_info['info'].keys(), " info keys")
+    print('')
+    print(match_info['info']['participants'][0]['summonerName'])
+    print('---------------------------------------------------------')
+    i = 0
+    while i <= 9:
+        if match_info["info"]["participants"][i]["summonerName"] == "grim1223":
+            print('grim1223 is index: ', i)
+        i += 1
