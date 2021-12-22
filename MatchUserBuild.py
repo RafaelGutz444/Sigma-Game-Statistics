@@ -37,7 +37,7 @@ match_version = "v5"
 match_name_plural = "matches"
 match_parameter = "puuid"
 match_path_parameter = summoner_puuid
-match_ids = "/ids?start=0&count=1&"
+match_ids = "/ids?start=0&count=5&" # 10 or higher violates API request limits
 
 match_call = API_URL.format(region=match_region, api_name=match_apiName, version=match_version,
                             api_name_plural=match_name_plural, parameter=match_parameter,
@@ -116,28 +116,30 @@ def summonerBio(summonerList):
     summoner_match_ids = ""
 
     b = 0
-    while b in range(0, len(summonerList)):
-        summoner_call = API_URL.format(region=summoner_region, api_name=summoner_apiName, version=summoner_version,
+    with open('SummonerList.csv', 'w') as csvfile:
+
+        fields = ['puuid', 'accountId', 'name', 'summonerLevel']
+        writer = csv.writer(csvfile)
+        writer.writerow(fields)
+
+        while b in range(0, len(summonerList)):
+            summoner_call = API_URL.format(region=summoner_region, api_name=summoner_apiName, version=summoner_version,
                                        api_name_plural=summoner_name_plural, parameter=summoner_parameter,
                                        path_parameter=str(summoner_path_param[b]), match_ids=summoner_match_ids,
                                        api_key=app_key)
-        summonerBio_call = requests.get(summoner_call).json()
-        print(summoner_call)
-        summonerStatHolder = [0, 0, 0, 0] # [0] = puuid | [1] = accountId | [2] = name | [3] = summonerLevel |
-        print(summonerBio_call.keys())
-        summonerStatHolder[0] = summonerBio_call['puuid']
-        summonerStatHolder[1] = summonerBio_call['accountId']
-        summonerStatHolder[2] = summonerBio_call['name']
-        summonerStatHolder[3] = summonerBio_call['summonerLevel']
+            summonerBio_call = requests.get(summoner_call).json()
+            print(summoner_call)
+            summonerStatHolder = [0, 0, 0, 0] # [0] = puuid | [1] = accountId | [2] = name | [3] = summonerLevel |
+            print(summonerBio_call.keys())
+            summonerStatHolder[0] = summonerBio_call['puuid']
+            summonerStatHolder[1] = summonerBio_call['accountId']
+            summonerStatHolder[2] = summonerBio_call['name']
+            summonerStatHolder[3] = summonerBio_call['summonerLevel']
+            b += 1
+            z = 0
+            writer.writerow(summonerStatHolder)  # Writes in values for puuid, accountId, name, summonerLevel attributes
 
-        with open('SummonerList.csv', 'w') as csvfile:
 
-            fields = ['puuid', 'accountId', 'name', 'summonerLevel']
-            writer = csv.writer(csvfile)
-            writer.writerow(fields)
-            for row in summonerStatHolder:
-                writer.writerow(summonerStatHolder)
-        b += 1
 peopleBio = summonerBio(summonerList)
 
 # with open('SummonerList.csv', 'w') as matchSummary:
