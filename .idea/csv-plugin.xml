@@ -10,7 +10,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="/MatchSummary.csv">
+        <entry key="/SummonerList.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

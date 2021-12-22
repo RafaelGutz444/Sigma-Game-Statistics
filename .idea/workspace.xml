@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a38960c8-543e-4360-81c8-d9df17a36117" name="Changes" comment="API request error fix with regards to MatchSummary info">
-      <change afterPath="$PROJECT_DIR$/SummonerList.csv" afterDir="false" />
+    <list default="true" id="a38960c8-543e-4360-81c8-d9df17a36117" name="Changes" comment="Reworks">
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatchHistory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MatchHistory.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatchSummary.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatchUserBuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/MatchUserBuild.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SummonerList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SummonerList.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639541007551</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Reworks">
+      <created>1639768913495</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639768913495</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,7 +132,8 @@
     <MESSAGE value="Data uploads" />
     <MESSAGE value="Data acquisition from Riot Games API" />
     <MESSAGE value="API request error fix with regards to MatchSummary info" />
-    <option name="LAST_COMMIT_MESSAGE" value="API request error fix with regards to MatchSummary info" />
+    <MESSAGE value="Reworks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -140,7 +147,6 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="match_info_call" language="Python" />
         <watch expression="summonerStatHolder" language="Python" />
       </configuration>
     </watches-manager>

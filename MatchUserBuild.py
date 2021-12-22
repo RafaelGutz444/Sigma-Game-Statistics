@@ -141,20 +141,3 @@ def summonerBio(summonerList):
 
 
 peopleBio = summonerBio(summonerList)
-
-# with open('SummonerList.csv', 'w') as matchSummary:
-#     fields = ['Participants']
-#     writer = csv.DictWriter(matchSummary, fieldnames=fields)
-#     match_info = requests.get(match_info_call).json()  # Dictionary type
-#     print(type(match_info))
-#     print(match_info.keys(), " Match Keys.")
-#     print(match_info['info'].keys(), " info keys")
-#     print('')
-#     print(match_info['info']['participants'][0]['summonerName'])
-#     print('---------------------------------------------------------')
-#     i = 0
-#     while i <= 9:
-#         if match_info["info"]["participants"][i]["summonerName"] == "grim1223":
-#             print('grim1223 is index: ', i)
-#         i += 1
-#
