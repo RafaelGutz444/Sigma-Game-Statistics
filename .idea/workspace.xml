@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a38960c8-543e-4360-81c8-d9df17a36117" name="Changes" comment="Reworks">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+    <list default="true" id="a38960c8-543e-4360-81c8-d9df17a36117" name="Changes" comment="API request corrections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatchHistory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MatchHistory.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatchUserBuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/MatchUserBuild.py" afterDir="false" />
@@ -114,7 +113,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639768913495</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="API request corrections">
+      <created>1640134812491</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640134812491</updated>
+    </task>
+    <task id="LOCAL-00006" summary="API request corrections">
+      <created>1640134932868</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640134932868</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,7 +146,8 @@
     <MESSAGE value="Data acquisition from Riot Games API" />
     <MESSAGE value="API request error fix with regards to MatchSummary info" />
     <MESSAGE value="Reworks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworks" />
+    <MESSAGE value="API request corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="API request corrections" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -74,8 +74,6 @@ with open(filename, 'r') as csv_file:
         # print(row)
     # print(match_summary_path_parameter)
 
-
-
 # API: MAtch-v5 --------------------------------------------------------------------------------------------------------
 # Goal: Iterate Match History to pull all puuids (basically user IDs).
 def summonerNames():
@@ -138,6 +136,7 @@ def summonerBio(summonerList):
             b += 1
             z = 0
             writer.writerow(summonerStatHolder)  # Writes in values for puuid, accountId, name, summonerLevel attributes
-
+    csvfile.close()
 
 peopleBio = summonerBio(summonerList)
+
