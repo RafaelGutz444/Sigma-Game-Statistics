@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a38960c8-543e-4360-81c8-d9df17a36117" name="Changes" comment="API request corrections">
+    <list default="true" id="a38960c8-543e-4360-81c8-d9df17a36117" name="Changes" comment="Summoner Match History CSV creation">
+      <change afterPath="$PROJECT_DIR$/2matoe.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Clavey.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eat Thighs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreederStudy.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNIGHT SIR LORD.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Madge.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAFIYO.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sophadoph.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grim1223.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gói.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatchHistory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MatchHistory.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatchUserBuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/MatchUserBuild.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SummonerList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SummonerList.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SummonerMatchHistory.py" beforeDir="false" afterPath="$PROJECT_DIR$/SummonerMatchHistory.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +65,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="scaledRequests" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="SummonerMatchHistory" type="PythonConfigurationType" factoryName="Python">
       <module name="Sigma-Game-Statistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,7 +77,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MatchUserBuild.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SummonerMatchHistory.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640134932868</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="SummonerList completion">
+      <created>1640664979766</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640664979766</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Summoner Match History CSV creation">
+      <created>1640669037062</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640669037062</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,7 +172,9 @@
     <MESSAGE value="API request error fix with regards to MatchSummary info" />
     <MESSAGE value="Reworks" />
     <MESSAGE value="API request corrections" />
-    <option name="LAST_COMMIT_MESSAGE" value="API request corrections" />
+    <MESSAGE value="SummonerList completion" />
+    <MESSAGE value="Summoner Match History CSV creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Summoner Match History CSV creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -159,10 +186,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="summonerStatHolder" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

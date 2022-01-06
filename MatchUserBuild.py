@@ -37,7 +37,7 @@ match_version = "v5"
 match_name_plural = "matches"
 match_parameter = "puuid"
 match_path_parameter = summoner_puuid
-match_ids = "/ids?start=0&count=5&" # 10 or higher violates API request limits
+match_ids = "/ids?start=0&count=1&" # 10 or higher violates API request limits
 
 match_call = API_URL.format(region=match_region, api_name=match_apiName, version=match_version,
                             api_name_plural=match_name_plural, parameter=match_parameter,
