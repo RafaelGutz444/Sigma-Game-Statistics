@@ -51,7 +51,6 @@ filename = 'MatchHistory.csv'
 
 with open(filename, 'w') as csvFile:
     csvWriter = csv.writer(csvFile)
-    csvWriter.writerow(fields)
 
     # Iterate through array to make each item from the array, a new row in csv
     i = 0
@@ -100,7 +99,11 @@ def summonerNames():
 
 summonerList = summonerNames() # List of all summoner names
 
-def summonerBio(summonerList):
+chosenUsers = list(
+    ["RAFIYO", "BraDeLeOh", "HydraSniper", "EddyDev", "M1dus", "KimJxngUn", "Young Int", "SupaSimon21",
+     "Kamen Rider Lim", "Caeruluna"])
+
+def summonerBio(chosenUsers):
     API_URL = "https://{region}.api.riotgames.com/lol/{api_name}/{version}/{api_name_plural}/by-{parameter}/{" \
               "path_parameter}{match_ids}?api_key={api_key}"
     summoner_region = "na1"
@@ -108,9 +111,7 @@ def summonerBio(summonerList):
     summoner_version = "v4"
     summoner_name_plural = "summoners"
     summoner_parameter = "name"
-    summoner_path_param = summonerList
-    summoner_path_param = summonerList
-    summoner_path_param = summonerList
+    summoner_path_param = chosenUsers
     summoner_match_ids = ""
 
     b = 0
@@ -120,7 +121,7 @@ def summonerBio(summonerList):
         writer = csv.writer(csvfile)
         writer.writerow(fields)
 
-        while b in range(0, len(summonerList)):
+        while b in range(0, len(chosenUsers)):
             summoner_call = API_URL.format(region=summoner_region, api_name=summoner_apiName, version=summoner_version,
                                        api_name_plural=summoner_name_plural, parameter=summoner_parameter,
                                        path_parameter=str(summoner_path_param[b]), match_ids=summoner_match_ids,
@@ -138,5 +139,14 @@ def summonerBio(summonerList):
             writer.writerow(summonerStatHolder)  # Writes in values for puuid, accountId, name, summonerLevel attributes
     csvfile.close()
 
-peopleBio = summonerBio(summonerList)
+    # Only the fields row and the column of MatchIds are filled in. So now let's fill in the remaining rows.
+    userStepper = 0
+    # Let's start by reading the user CSV file to get the MatchID
+
+    with open(chosenUsers[0]+'.csv', 'r') as csvfile:
+        csvreader = csv.reader(csvfile)
+
+
+
+peopleBio = summonerBio(chosenUsers)
 
