@@ -58,28 +58,13 @@ chosenUsers = list(
 def user_matchid_hold(chosen_users):
     h = 0
 
-    matchesIDs = [
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0]]
+    matchesIDs = []
     if h <= len(chosenUsers):
         with open("{}.csv".format(chosenUsers[h]), 'r') as csvfile:
             csv_reader = csv.reader(csvfile)
             next(csv_reader)
-            i = 0
-
             for element in csv_reader:
-                matchesIDs[i][0] = element[0]
-                i += 1
-                # matchesIDs.append(element[0])
-
+                matchesIDs.append(element)
         h += 1
     return matchesIDs
 

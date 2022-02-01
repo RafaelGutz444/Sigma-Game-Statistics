@@ -147,6 +147,5 @@ def summonerBio(chosenUsers):
         csvreader = csv.reader(csvfile)
 
 
-
 peopleBio = summonerBio(chosenUsers)
 
